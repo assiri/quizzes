@@ -1,0 +1,13 @@
+
+{{#if nextf}}
+  <button class="bt" {{action "next"}}>تالي</button>
+{{/if}}
+
+{{#each model  as |item|}}
+{{quiz-answer title=item.details  id=item.id mdl=model}}
+    {{/each}}
+{{#if prevf}}
+<button class="bt" {{action "prev"}}>سابق</button>
+{{/if}}
+
+{{outlet}}
